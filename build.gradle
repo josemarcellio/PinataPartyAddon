@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'com.gradleup.shadow' version '8.3.2'
 }
 
 group = 'com.josemarcellio.pinatapartyaddon'
@@ -28,8 +29,10 @@ dependencies {
     fileTree(dir: 'libs', include: '*.jar').each { file ->
         compileOnly files(file)
     }
+    implementation 'org.bstats:bstats-bukkit:3.0.2'
 }
 
-jar {
+shadowJar {
     archiveFileName = "PinataPartyAddon.jar"
+    relocate 'org.bstats', 'com.josemarcellio.pinatapartyaddon.bstats'
 }
