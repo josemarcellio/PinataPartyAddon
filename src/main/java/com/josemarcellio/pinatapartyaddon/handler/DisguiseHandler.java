@@ -1,8 +1,8 @@
 package com.josemarcellio.pinatapartyaddon.handler;
 
 import com.josemarcellio.pinatapartyaddon.PinataPartyAddon;
-import com.josemarcellio.pinatapartyaddon.handler.type.MobIDisguiseType;
-import com.josemarcellio.pinatapartyaddon.handler.type.PlayerIDisguiseType;
+import com.josemarcellio.pinatapartyaddon.handler.type.MobDisguiseType;
+import com.josemarcellio.pinatapartyaddon.handler.type.PlayerDisguiseType;
 import me.libraryaddict.disguise.disguisetypes.DisguiseType;
 import org.bukkit.entity.Entity;
 
@@ -28,11 +28,11 @@ public class DisguiseHandler {
 
     private IDisguiseType createDisguise(String type, String value) {
         if (type.equalsIgnoreCase("PLAYER")) {
-            return new PlayerIDisguiseType(value);
+            return new PlayerDisguiseType(value);
         } else if (type.equalsIgnoreCase("MOB")) {
             try {
                 DisguiseType disguiseType = DisguiseType.valueOf(value.toUpperCase());
-                return new MobIDisguiseType(disguiseType);
+                return new MobDisguiseType(disguiseType);
             } catch (IllegalArgumentException e) {
                 plugin.getLogger().warning("Invalid DisguiseType: " + value);
             }

@@ -5,11 +5,11 @@ import me.libraryaddict.disguise.disguisetypes.DisguiseType;
 import me.libraryaddict.disguise.disguisetypes.MobDisguise;
 import org.bukkit.entity.Entity;
 
-public class MobIDisguiseType implements IDisguiseType {
+public class MobDisguiseType implements IDisguiseType {
 
     private final DisguiseType disguiseType;
 
-    public MobIDisguiseType(DisguiseType disguiseType) {
+    public MobDisguiseType(DisguiseType disguiseType) {
         this.disguiseType = disguiseType;
     }
 
