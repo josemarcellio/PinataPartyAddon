@@ -1,0 +1,12 @@
+name: PinataPartyAddon
+main: com.josemarcellio.pinatapartyaddon.PinataPartyAddon
+version: 1.0.0
+author: JoseMarcellio
+depend:
+  - LibsDisguises
+  - PinataParty
+commands:
+  pinatapartyaddonreload:
+    aliases:
+      - ppar
+      - ppareload

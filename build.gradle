@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.josemarcellio.pinatapartyaddon'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+        content {
+            includeGroup 'org.bukkit'
+            includeGroup 'org.spigotmc'
+        }
+    }
+    maven { url 'https://repo.md-5.net/content/groups/public/' }
+    maven { url "https://repo.dmulloy2.net/repository/public/" }
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT'
+    compileOnly 'LibsDisguises:LibsDisguises:10.0.44'
+    compileOnly group: "com.comphenix.protocol", name: "ProtocolLib", version: "4.8.0";
+    fileTree(dir: 'libs', include: '*.jar').each { file ->
+        compileOnly files(file)
+    }
+}
+
+jar {
+    archiveFileName = "PinataPartyAddon.jar"
+}
