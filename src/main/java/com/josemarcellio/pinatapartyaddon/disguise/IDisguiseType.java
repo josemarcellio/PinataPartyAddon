@@ -1,4 +1,4 @@
-package com.josemarcellio.pinatapartyaddon.handler;
+package com.josemarcellio.pinatapartyaddon.disguise;
 
 import org.bukkit.entity.Entity;
 

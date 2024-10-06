@@ -1,5 +1,35 @@
-#DISGUISE_TYPE: MOB
-DISGUISE_TYPE: PLAYER
+# Player Example:
+# DISGUISE_TYPE: PLAYER
+# DISGUISE_VALUE: "JoseMarcellio"
+# OR
+# DISGUISE_VALUE: RANDOM
 
-#DISGUISE_VALUE: "ZOMBIE"
-DISGUISE_VALUE: "JoseMarcellio"
+# Mob Example:
+# DISGUISE_TYPE: MOB
+# DISGUISE_VALUE: ZOMBIE
+# OR
+# DISGUISE_VALUE: RANDOM
+
+# Randomized Options:
+# You can set DISGUISE_TYPE to RANDOM and DISGUISE_VALUE to RANDOM
+# You can also set DISGUISE_TYPE to MOB and DISGUISE_VALUE to RANDOM
+# Alternatively, both DISGUISE_TYPE and DISGUISE_VALUE can be set to RANDOM
+
+# If you don't want random values, you can input them manually.
+
+RANDOM:
+  TYPE_PLAYER:
+    - "JoseMarcellio"
+    - "Pamungkas"
+    - "MarcelTeja"
+    - "KingJose357"
+    - "Panbers"
+  TYPE_MOB:
+    - "ZOMBIE"
+    - "PIG"
+    - "WOLF"
+    - "SPIDER"
+    - "CREEPER"
+
+DISGUISE_TYPE: RANDOM
+DISGUISE_VALUE: RANDOM

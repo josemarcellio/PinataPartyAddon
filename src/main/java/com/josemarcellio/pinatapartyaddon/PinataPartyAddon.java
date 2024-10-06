@@ -1,7 +1,7 @@
 package com.josemarcellio.pinatapartyaddon;
 
 import com.josemarcellio.pinatapartyaddon.command.PinataPartyAddonReloadCommand;
-import com.josemarcellio.pinatapartyaddon.handler.DisguiseHandler;
+import com.josemarcellio.pinatapartyaddon.disguise.manager.DisguiseManager;
 import com.josemarcellio.pinatapartyaddon.listener.PinataPartyListener;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -17,8 +17,8 @@ public class PinataPartyAddon extends JavaPlugin {
         new Metrics(this, id);
 
         saveDefaultConfig();
-        DisguiseHandler disguiseHandler = new DisguiseHandler(this);
-        getServer().getPluginManager().registerEvents(new PinataPartyListener(disguiseHandler), this);
+        DisguiseManager disguiseManager = new DisguiseManager(this);
+        getServer().getPluginManager().registerEvents(new PinataPartyListener(disguiseManager), this);
 
         getCommand("pinatapartyaddonreload").setExecutor(new PinataPartyAddonReloadCommand(this));
     }

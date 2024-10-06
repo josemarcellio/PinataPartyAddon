@@ -1,6 +1,6 @@
-package com.josemarcellio.pinatapartyaddon.handler.type;
+package com.josemarcellio.pinatapartyaddon.disguise.type;
 
-import com.josemarcellio.pinatapartyaddon.handler.IDisguiseType;
+import com.josemarcellio.pinatapartyaddon.disguise.IDisguiseType;
 import me.libraryaddict.disguise.disguisetypes.PlayerDisguise;
 import org.bukkit.entity.Entity;
 
